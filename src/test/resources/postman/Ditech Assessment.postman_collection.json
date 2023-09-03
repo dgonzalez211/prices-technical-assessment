@@ -1,0 +1,195 @@
+{
+  "info": {
+    "_postman_id": "ad4cd080-2f09-4735-864a-974b6fe10f1e",
+    "name": "Ditech Assessment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "21098536"
+  },
+  "item": [
+    {
+      "name": "/actuator/health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/actuator/health",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "actuator",
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/prices?applicationDate=2020-06-14T10:00:00&productId=35455&brandId=1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/prices?applicationDate=2020-06-14T10:00:00&productId=35455&brandId=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "prices"
+          ],
+          "query": [
+            {
+              "key": "applicationDate",
+              "value": "2020-06-14T10:00:00"
+            },
+            {
+              "key": "productId",
+              "value": "35455"
+            },
+            {
+              "key": "brandId",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/prices?applicationDate=2020-06-14T16:00:00&productId=35455&brandId=1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/prices?applicationDate=2020-06-14T16:00:00&productId=35455&brandId=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "prices"
+          ],
+          "query": [
+            {
+              "key": "applicationDate",
+              "value": "2020-06-14T16:00:00"
+            },
+            {
+              "key": "productId",
+              "value": "35455"
+            },
+            {
+              "key": "brandId",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/prices?applicationDate=2020-06-14T21:00:00&productId=35455&brandId=1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/prices?applicationDate=2020-06-14T21:00:00&productId=35455&brandId=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "prices"
+          ],
+          "query": [
+            {
+              "key": "applicationDate",
+              "value": "2020-06-14T21:00:00"
+            },
+            {
+              "key": "productId",
+              "value": "35455"
+            },
+            {
+              "key": "brandId",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/prices?applicationDate=2020-06-15T10:00:00&productId=35455&brandId=1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/prices?applicationDate=2020-06-15T10:00:00&productId=35455&brandId=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "prices"
+          ],
+          "query": [
+            {
+              "key": "applicationDate",
+              "value": "2020-06-15T10:00:00"
+            },
+            {
+              "key": "productId",
+              "value": "35455"
+            },
+            {
+              "key": "brandId",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/prices?applicationDate=2020-06-16T10:00:00&productId=35455&brandId=1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/prices?applicationDate=2020-06-16T21:00:00&productId=35455&brandId=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "prices"
+          ],
+          "query": [
+            {
+              "key": "applicationDate",
+              "value": "2020-06-16T21:00:00"
+            },
+            {
+              "key": "productId",
+              "value": "35455"
+            },
+            {
+              "key": "brandId",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

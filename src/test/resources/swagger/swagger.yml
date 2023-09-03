@@ -1,0 +1,137 @@
+openapi: 3.0.3
+info:
+  title: Swagger Ditech Technical Assessment  | Prices - OpenAPI 3.0
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: apiteam@swagger.io
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.11
+servers:
+  - url: http://localhost:8080
+tags:
+  - name: prices
+    description: Find applicable prices given a date and productId and brandId
+    externalDocs:
+      description: Find out more
+      url: http://swagger.io
+paths:
+  /prices:
+    get:
+      tags:
+        - prices
+      summary: Find prices by ApplicationDate, ProductId and BrandId
+      description: Returns a list of prices with size n
+      operationId: findPrices
+      parameters:
+        - name: applicationDate
+          in: query
+          description: Price application date
+          required: false
+          explode: true
+          schema:
+            type: string
+            format: date-time
+            example: "2023-09-02T00:00:00"
+        - name: productId
+          in: query
+          description: Product Id
+          required: false
+          explode: true
+          schema:
+            type: integer
+            format: int64
+            example: 35455
+        - name: brandId
+          in: query
+          description: Brand Id
+          required: false
+          explode: true
+          schema:
+            type: integer
+            format: int64
+            example: 1
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Prices'
+        '400':
+          description: Invalid status value
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal Server Error
+
+components:
+  schemas:
+    Prices:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uid
+          example: "c0acbd79-10bd-4e73-bf9b-82251e74dd4d"
+        brand_id:
+          type: integer
+          format: int64
+          example: 1
+        start_date:
+          type: string
+          format: date-time
+          example: "2023-05-06T00:00:00"
+        end_date:
+          type: string
+          format: date-time
+          example: "2023-11-21T20:59:59"
+        price_list:
+          type: integer
+          format: int64
+          example: 1
+        product_id:
+          type: integer
+          format: int64
+          example: 35455
+        priority:
+          type: integer
+          format: int64
+          example: 0
+        price:
+          type: number
+          format: decimal
+          example: 35.5
+        curr:
+          type: string
+          example: "EUR"
+    Error:
+      type: object
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+          example: "2023-09-31T16:38:59.693+00:00"
+        status:
+          type: integer
+          format: int64
+          example: 400
+        error:
+          type: string
+          example: "Bad Request"
+        exception:
+          type: string
+          example: "org.springframework.web.bind.MissingServletRequestParameterException"
+        message:
+          type: string
+          example: "Required request parameter 'brandId' for method parameter type Integer is not present"
+        path:
+          type: string
+          example: "/prices"

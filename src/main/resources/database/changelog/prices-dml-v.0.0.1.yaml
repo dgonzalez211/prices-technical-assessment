@@ -1,0 +1,46 @@
+databaseChangeLog:
+  - changeSet:
+      id: 02_load_data_prices_table
+      author: dgonzalez211
+      changes:
+        - loadData:
+            catalogName: cat
+            columns:
+              - column:
+                  name: id
+                  type: STRING
+              - column:
+                  name: brand_id
+                  type: NUMERIC
+              - column:
+                  name: start_date
+                  type: DATE
+              - column:
+                  name: end_date
+                  type: DATE
+              - column:
+                  name: price_list
+                  type: NUMERIC
+              - column:
+                  name: product_id
+                  type: NUMERIC
+              - column:
+                  name: priority
+                  type: NUMERIC
+              - column:
+                  name: priority
+                  type: NUMERIC
+              - column:
+                  name: price
+                  type: NUMERIC
+              - column:
+                  name: curr
+                  type: STRING
+            commentLineStartsWith: //
+            encoding: UTF-8
+            file: mock_data/prices.csv
+            quotchar: ''''
+            relativeToChangelogFile: true
+            separator: ;
+            tableName: prices
+            usePreparedStatements: true

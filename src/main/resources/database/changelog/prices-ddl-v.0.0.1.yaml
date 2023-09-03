@@ -1,0 +1,55 @@
+databaseChangeLog:
+  - changeSet:
+      id: 01_create_prices_table
+      author: dgonzalez211
+      changes:
+        - createTable:
+            tableName: prices
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKeyName: prices_pkey
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: brand_id
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: start_date
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: end_date
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price_list
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: product_id
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: priority
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price
+                  type: float
+                  constraints:
+                    nullable: false
+              - column:
+                  name: curr
+                  type: varchar(3)
+                  constraints:
+                    nullable: false
