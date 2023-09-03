@@ -1,3 +1,4 @@
+# Workflow for testing purposes
 name: Java CI with Maven
 
 on:
