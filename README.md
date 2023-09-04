@@ -90,4 +90,5 @@ HTTP Requests tests:
   <a href="https://www.linkedin.com/in/diego-andres-gonzalez-marrugo/">
     <img alt="Linkedin" title="Diego Gonzalez" src="assets/images/postman_tests.png">
   </a>
+  You can find this requests collection in `src/test/resources/postman`
 </p>
