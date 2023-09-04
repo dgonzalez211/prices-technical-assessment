@@ -35,7 +35,7 @@
 
 ## Introduction
 
-[![Build Status](https://github.com/dgonzalez211/prices-technical-assessment/actions/workflows/maven.yml/badge.svg)](https://travis-ci.org/gitpoint/git-point)
+[![Build Status](https://github.com/dgonzalez211/prices-technical-assessment/actions/workflows/maven.yml/badge.svg)](https://github.com/dgonzalez211/prices-technical-assessment/)
 
 This project aims to develop a highly efficient and scalable microservice using cutting-edge technologies
 while adhering to best practices in design and programming. The microservice will be containerized in a Docker
@@ -79,7 +79,7 @@ Unit tests:
 
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/diego-andres-gonzalez-marrugo/">
+  <a>
     <img alt="Linkedin" title="Diego Gonzalez" src="assets/images/unit_tests.png">
   </a>
 </p>
@@ -87,7 +87,7 @@ Unit tests:
 
 HTTP Requests tests:
 <p align="center">
-  <a href="https://www.linkedin.com/in/diego-andres-gonzalez-marrugo/">
+  <a>
     <img alt="Linkedin" title="Diego Gonzalez" src="assets/images/postman_tests.png">
   </a>
 </p>
