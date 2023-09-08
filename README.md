@@ -44,7 +44,7 @@ and the DRY principle. Technologies include Spring Boot, Maven, H2 Database, Lom
 and Liquibase, with an emphasis on separation of concerns and robust database schema management using Liquibase.
 
 
-## Technologies
+## Technologies 
 
 This project was done using Springboot, including some technologies such as:
 
