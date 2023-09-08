@@ -25,7 +25,7 @@ public interface PricesMapper {
     Prices toPrices(PricesEntity pricesEntity);
 
     default List<Prices> toPrices(List<PricesEntity> pricesEntityList) {
-        return CollectionUtils.isEmpty(pricesEntityList) ? new ArrayList<>() : pricesEntityList.stream().map(this::toPrices).collect(Collectors.toList());
+        return CollectionUtils.isEmpty(pricesEntityList) ? new ArrayList<>() : pricesEntityList.stream().map(this::toPrices).toList();
     }
 
 }

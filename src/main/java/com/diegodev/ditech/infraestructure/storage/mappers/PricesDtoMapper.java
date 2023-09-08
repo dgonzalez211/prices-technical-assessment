@@ -1,6 +1,6 @@
-package com.diegodev.ditech.application.rest.mappers;
+package com.diegodev.ditech.infraestructure.storage.mappers;
 
-import com.diegodev.ditech.application.rest.dto.PricesDto;
+import com.diegodev.ditech.infraestructure.dto.PricesDto;
 import com.diegodev.ditech.domain.models.Prices;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -8,7 +8,6 @@ import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Mapper(componentModel = "spring")
 public interface PricesDtoMapper {
@@ -25,7 +24,7 @@ public interface PricesDtoMapper {
     PricesDto toPricesDto(Prices prices);
 
     default List<PricesDto> toPricesDto(List<Prices> pricesList) {
-        return CollectionUtils.isEmpty(pricesList) ? new ArrayList<>() : pricesList.stream().map(this::toPricesDto).collect(Collectors.toList());
+        return CollectionUtils.isEmpty(pricesList) ? new ArrayList<>() : pricesList.stream().map(this::toPricesDto).toList();
     }
 
 }

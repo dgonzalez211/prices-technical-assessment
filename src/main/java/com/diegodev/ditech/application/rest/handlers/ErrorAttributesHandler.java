@@ -1,4 +1,4 @@
-package com.diegodev.ditech.domain.handlers;
+package com.diegodev.ditech.application.rest.handlers;
 
 import org.springframework.boot.web.error.ErrorAttributeOptions;
 import org.springframework.web.context.request.WebRequest;

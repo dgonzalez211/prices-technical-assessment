@@ -1,9 +1,9 @@
 package com.diegodev.ditech.domain.services.impl;
 
+import com.diegodev.ditech.domain.service.PricesService;
 import com.diegodev.ditech.application.rest.service.impl.PricesServiceImpl;
 import com.diegodev.ditech.domain.models.Prices;
 import com.diegodev.ditech.domain.repositories.PricesRepository;
-import com.diegodev.ditech.application.rest.service.PricesService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -50,7 +50,9 @@ class PriceServiceImplTest {
                 .build()));
 
         // act
-        List<Prices> pricesList = pricesService.getPrices(DateTimeFormatter.ISO_LOCAL_DATE_TIME.parse("2020-06-14T00:00:00", LocalDateTime::from), 35455, 1);
+        List<Prices> pricesList = Collections.singletonList(
+                pricesService.getPrices(DateTimeFormatter.ISO_LOCAL_DATE_TIME.parse("2020-06-14T00:00:00", LocalDateTime::from), 35455, 1)
+        );
 
         // assert
         verify(pricesRepository).getPrices(DateTimeFormatter.ISO_LOCAL_DATE_TIME.parse("2020-06-14T00:00:00", LocalDateTime::from), 35455, 1);

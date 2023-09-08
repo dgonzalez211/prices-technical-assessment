@@ -1,8 +1,8 @@
 package com.diegodev.ditech.infraestructure.controller;
 
-import com.diegodev.ditech.application.rest.dto.PricesDto;
-import com.diegodev.ditech.application.rest.mappers.PricesDtoMapper;
-import com.diegodev.ditech.application.rest.service.PricesService;
+import com.diegodev.ditech.infraestructure.dto.PricesDto;
+import com.diegodev.ditech.infraestructure.storage.mappers.PricesDtoMapper;
+import com.diegodev.ditech.domain.service.PricesService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @RestController
 @AllArgsConstructor
@@ -23,7 +22,7 @@ public class PricesController {
     private final PricesDtoMapper pricesDtoMapper;
 
     @GetMapping(value = "/prices")
-    public ResponseEntity<List<PricesDto>> getPrices(@RequestParam(name = "applicationDate") LocalDateTime applicationDate,
+    public ResponseEntity<PricesDto> getPrices(@RequestParam(name = "applicationDate") LocalDateTime applicationDate,
                                                      @RequestParam(name = "productId") Integer productId,
                                                      @RequestParam(name = "brandId") Integer brandId) {
         log.info("PricesController - Get Prices by {} - {} - {}", applicationDate, productId, brandId);

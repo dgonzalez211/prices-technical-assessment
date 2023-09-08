@@ -1,4 +1,4 @@
-package com.diegodev.ditech.application.rest.dto;
+package com.diegodev.ditech.infraestructure.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;

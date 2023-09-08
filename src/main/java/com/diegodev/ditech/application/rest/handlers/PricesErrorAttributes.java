@@ -1,6 +1,5 @@
 package com.diegodev.ditech.application.rest.handlers;
 
-import com.diegodev.ditech.domain.handlers.ErrorAttributesHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.web.error.ErrorAttributeOptions;
 import org.springframework.boot.web.servlet.error.DefaultErrorAttributes;
