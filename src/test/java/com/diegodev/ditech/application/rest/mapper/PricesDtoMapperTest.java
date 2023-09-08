@@ -1,9 +1,9 @@
 package com.diegodev.ditech.application.rest.mapper;
 
 import com.diegodev.ditech.infraestructure.dto.PricesDto;
-import com.diegodev.ditech.infraestructure.storage.mappers.PricesDtoMapper;
+import com.diegodev.ditech.application.rest.mappers.PricesDtoMapper;
+import com.diegodev.ditech.application.rest.mappers.PricesDtoMapperImpl;
 import com.diegodev.ditech.domain.models.Prices;
-import com.diegodev.ditech.infraestructure.storage.mappers.PricesDtoMapperImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
