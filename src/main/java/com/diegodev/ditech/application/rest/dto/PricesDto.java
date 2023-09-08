@@ -3,7 +3,6 @@ package com.diegodev.ditech.application.rest.dto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,11 +19,9 @@ import java.util.UUID;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class PricesDto {
 
-    @NotEmpty
     @JsonProperty("id")
     private UUID id;
 
-    @NotEmpty
     @JsonProperty("brand_id")
     private Integer brandId;
 

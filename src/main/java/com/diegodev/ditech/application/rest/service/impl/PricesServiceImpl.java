@@ -1,8 +1,8 @@
-package com.diegodev.ditech.domain.services.impl;
+package com.diegodev.ditech.application.rest.service.impl;
 
 import com.diegodev.ditech.domain.models.Prices;
 import com.diegodev.ditech.domain.repositories.PricesRepository;
-import com.diegodev.ditech.domain.services.PricesService;
+import com.diegodev.ditech.application.rest.service.PricesService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

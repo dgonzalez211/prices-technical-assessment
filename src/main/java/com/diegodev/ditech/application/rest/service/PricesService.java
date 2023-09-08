@@ -1,4 +1,4 @@
-package com.diegodev.ditech.domain.services;
+package com.diegodev.ditech.application.rest.service;
 
 import com.diegodev.ditech.domain.models.Prices;
 

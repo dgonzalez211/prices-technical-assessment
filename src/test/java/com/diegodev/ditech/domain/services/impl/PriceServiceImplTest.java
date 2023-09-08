@@ -1,8 +1,9 @@
 package com.diegodev.ditech.domain.services.impl;
 
+import com.diegodev.ditech.application.rest.service.impl.PricesServiceImpl;
 import com.diegodev.ditech.domain.models.Prices;
 import com.diegodev.ditech.domain.repositories.PricesRepository;
-import com.diegodev.ditech.domain.services.PricesService;
+import com.diegodev.ditech.application.rest.service.PricesService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -11,7 +12,6 @@ import org.springframework.util.CollectionUtils;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
