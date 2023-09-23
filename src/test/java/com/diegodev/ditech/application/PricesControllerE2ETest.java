@@ -1,4 +1,4 @@
-package com.diegodev.ditech.application.rest;
+package com.diegodev.ditech.application;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

@@ -1,6 +1,6 @@
 package com.diegodev.ditech;
 
-import com.diegodev.ditech.domain.service.PricesService;
+import com.diegodev.ditech.domain.usecase.PricesService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

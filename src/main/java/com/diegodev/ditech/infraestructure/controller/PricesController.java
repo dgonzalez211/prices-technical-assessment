@@ -1,8 +1,8 @@
 package com.diegodev.ditech.infraestructure.controller;
 
 import com.diegodev.ditech.infraestructure.dto.PricesDto;
-import com.diegodev.ditech.application.rest.mappers.PricesDtoMapper;
-import com.diegodev.ditech.domain.service.PricesService;
+import com.diegodev.ditech.application.mappers.PricesDtoMapper;
+import com.diegodev.ditech.domain.usecase.PricesService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

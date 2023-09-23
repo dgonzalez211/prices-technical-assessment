@@ -1,4 +1,4 @@
-package com.diegodev.ditech.domain.service;
+package com.diegodev.ditech.domain.usecase;
 
 import com.diegodev.ditech.domain.models.Prices;
 

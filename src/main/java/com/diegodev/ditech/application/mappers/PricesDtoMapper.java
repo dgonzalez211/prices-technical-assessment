@@ -1,4 +1,4 @@
-package com.diegodev.ditech.application.rest.mappers;
+package com.diegodev.ditech.application.mappers;
 
 import com.diegodev.ditech.infraestructure.dto.PricesDto;
 import com.diegodev.ditech.domain.models.Prices;

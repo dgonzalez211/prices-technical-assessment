@@ -1,4 +1,4 @@
-package com.diegodev.ditech.application.rest.handlers;
+package com.diegodev.ditech.infraestructure.handlers;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.web.error.ErrorAttributeOptions;
@@ -10,7 +10,7 @@ import java.util.Map;
 
 @Component
 @Slf4j
-public class PricesErrorAttributes extends DefaultErrorAttributes implements ErrorAttributesHandler {
+public class PricesErrorAttributes extends DefaultErrorAttributes {
 
     private static final String TRACE = "trace";
     private static final String LOCALE = "locale";

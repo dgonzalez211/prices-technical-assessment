@@ -1,7 +1,7 @@
-package com.diegodev.ditech.domain.services.impl;
+package com.diegodev.ditech.domain.usecase.impl;
 
-import com.diegodev.ditech.domain.service.PricesService;
-import com.diegodev.ditech.application.rest.service.impl.PricesServiceImpl;
+import com.diegodev.ditech.domain.usecase.PricesService;
+import com.diegodev.ditech.application.usecase.impl.PricesServiceImpl;
 import com.diegodev.ditech.domain.models.Prices;
 import com.diegodev.ditech.domain.repositories.PricesRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -18,8 +18,7 @@ import java.util.UUID;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
-import static org.springframework.test.util.AssertionErrors.assertEquals;
-import static org.springframework.test.util.AssertionErrors.assertFalse;
+import static org.springframework.test.util.AssertionErrors.*;
 
 @ExtendWith(SpringExtension.class)
 class PriceServiceImplTest {
@@ -59,6 +58,47 @@ class PriceServiceImplTest {
         assertFalse("PricesList should not be empty", CollectionUtils.isEmpty(pricesList));
         assertEquals("PricesList size should be 1", 1, pricesList.size());
 
+    }
+
+    @Test
+    void givenApplicationDateAndProductIdAndBrandId_whenNoPricesFound_ThenReturnNull() {
+        // arrange
+        when(pricesRepository.getPrices(any(), any(), any())).thenReturn(Collections.emptyList());
+
+        // act
+        Prices prices = pricesService.getPrices(DateTimeFormatter.ISO_LOCAL_DATE_TIME.parse("2020-06-14T00:00:00", LocalDateTime::from), 35455, 1);
+
+        // assert
+        verify(pricesRepository).getPrices(DateTimeFormatter.ISO_LOCAL_DATE_TIME.parse("2020-06-14T00:00:00", LocalDateTime::from), 35455, 1);
+        assertNull("Prices should be null when no prices found", prices);
+    }
+
+    @Test
+    void givenMultiplePricesForSameProductAndDate_whenFindByThoseFields_ThenReturnHighestPriorityPrice() {
+        // arrange
+        List<Prices> multiplePrices = List.of(
+                Prices.builder().priority(1).price(10.0F).build(),
+                Prices.builder().priority(2).price(20.0F).build(),
+                Prices.builder().priority(3).price(30.0F).build()
+        );
+
+        when(pricesRepository.getPrices(any(), any(), any())).thenReturn(multiplePrices);
+
+        // act
+        Prices prices = pricesService.getPrices(DateTimeFormatter.ISO_LOCAL_DATE_TIME.parse("2020-06-14T00:00:00", LocalDateTime::from), 35455, 1);
+
+        // assert
+        verify(pricesRepository).getPrices(DateTimeFormatter.ISO_LOCAL_DATE_TIME.parse("2020-06-14T00:00:00", LocalDateTime::from), 35455, 1);
+        assertEquals("Prices should have highest priority", 3, prices.getPriority());
+    }
+
+    @Test
+    void givenNullParameters_whenFindByThoseFields_ThenReturnNull() {
+        // act
+        Prices prices = pricesService.getPrices(null, null, null);
+
+        // assert
+        assertNull("Prices should be null when parameters are null", prices);
     }
 
 
